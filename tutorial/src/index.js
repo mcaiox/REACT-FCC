@@ -2,7 +2,7 @@ import React from "react"; // ES6 Modules imported from node modules
 import ReactDom from "react-dom";
 
 //Capitalised function names tells React this is not a regular function but rather a function component
-
+const element = <h1>Hello, world!</h1>; // This funny tag is neither a string or html, its JSX
 //Stateless functional component -> must return JSX
 function Greeting() {
   return (
@@ -10,11 +10,13 @@ function Greeting() {
     //user camelCase for html attributes
     //dont use divs, use appropiate names and dont place everything as a div -> follow html semantics
     <div>
-      <h4>Hello World</h4>
+      {element}
       <ul>
         <li>
-          <a href="#">Hello world</a>
-          <button>Button</button>
+          <h1>Welcome</h1>
+
+          <hr></hr>
+          <button onClick>Button</button>
         </li>
       </ul>
     </div>
@@ -27,3 +29,11 @@ function Greeting() {
 // };
 
 ReactDom.render(<Greeting />, document.getElementById("root")); //Render(what, where to)  //Render Greeting component and to root in Index.html which has  <div id="root"></div> in <body>
+
+// JSX Rules
+// Returns a single element
+// div, section ,article or Fragments(React.Fragments let you group a list of children without adding extra nodes to the DOM.)
+// use camelCase for html attributes
+// className instead of class
+// close every element
+// formatting
