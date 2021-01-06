@@ -11,18 +11,17 @@ function Greeting() {
     //dont use divs, use appropiate names and dont place everything as a div -> follow html semantics
     <div>
       {element}
-      <ul>
-        <li>
-          <h1>Welcome</h1>
-
-          <hr></hr>
-          <button onClick>Button</button>
-        </li>
-      </ul>
+      <Person />
+      <Message />
     </div>
   );
 }
 
+const Person = () => <h2>John Doe</h2>;
+
+const Message = () => {
+  return <p>this is my message</p>;
+};
 //what happens under the hood -> mshould return html doc syntax -> makes it easier/ readable.
 // const Greeting = () => {
 //   return React.createElement("h1", {}, "Hello World");
